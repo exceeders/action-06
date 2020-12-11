@@ -13,6 +13,6 @@ await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
   repo: core.getInput('repo-name'),
   username: 'team1',
   permission: 'push'
-})
+});
 
 // permission can be one of : pull, push, admin, maintain, triage
