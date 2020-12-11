@@ -9,9 +9,9 @@ const octokit = new Octokit({
     });
 
 await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
-  owner: 'org-name',
-  repo: 'repo-name',
-  username: 'team-name',
+  owner: core.getInput('org-name'),
+  repo: core.getInput('repo-name'),
+  username: 'team1',
   permission: 'push'
 })
 
