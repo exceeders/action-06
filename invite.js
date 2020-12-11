@@ -15,4 +15,4 @@ await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
   permission: 'push'
 })
 
-# permission can be one of : pull, push, admin, maintain, triage
+// permission can be one of : pull, push, admin, maintain, triage
