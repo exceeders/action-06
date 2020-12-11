@@ -26,7 +26,7 @@ jobs:
         uses : ./invite.js
         with :
            github_token: ${{ secrets.GITHUB_TOKEN }}
-           org-name: ${{ toJson(github.event.organization }}
-           repo-name: ${{ toJsosn(github.envent.repository.name }}
+           org-name: ${{ toJson(github.event.organization.login) }}
+           repo-name: ${{ toJsosn(github.envent.repository.name) }}
            
             
