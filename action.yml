@@ -8,7 +8,9 @@ inputs:
   repo-name:
     description: 'The repository name'
     required: true
-  
+  github_token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true  
   
 runs:
   using: 'node12'
