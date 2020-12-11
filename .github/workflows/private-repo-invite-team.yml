@@ -26,3 +26,5 @@ jobs:
           Repotype: ${{ toJson(github.event.repository.private) }}
         if : ${{ toJson(github.event.repository.private) }} == true  
         run : ./invite.js
+         with :
+           team-name: 
