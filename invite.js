@@ -11,7 +11,7 @@ const octokit = new Octokit({
 await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
   owner: 'org-name',
   repo: 'repo-name',
-  teamname: 'team-name',
+  username: 'team-name',
   permission: 'push'
 })
 
