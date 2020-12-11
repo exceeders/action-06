@@ -25,4 +25,4 @@ jobs:
         env:
           Repotype: ${{ toJson(github.event.repository.private) }}
         if : ${{ toJson(github.event.repository.private) }} == true  
-        run : echo "$Repotye"
+        run : ./invite.js
