@@ -23,6 +23,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: check private repo & invite team
         env:
-          Repotype: toJson(github.repository)
+          Repotype: toJson(github.event)
         # if : 
         run : echo "$Repotye"
