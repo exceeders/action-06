@@ -25,7 +25,7 @@ jobs:
         if : ${{ toJson(github.event.repository.private) }} == true  
         uses : ./
         with :
-           github_token: ${{ secrets.GITHUB_TOKEN }}
+         #  github_token: ${{ secrets.GITHUB_TOKEN }}
            org-name: ${{ toJson(github.event.organization.login) }}
            repo-name: ${{ toJson(github.event.repository.name) }}
            
