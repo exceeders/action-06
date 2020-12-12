@@ -27,6 +27,6 @@ jobs:
         with :
            github_token: ${{ secrets.GITHUB_TOKEN }}
            org-name: ${{ toJson(github.event.organization.login) }}
-           repo-name: ${{ toJson(github.envent.repository.name) }}
+           repo-name: ${{ toJson(github.event.repository.name) }}
            
             
