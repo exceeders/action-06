@@ -8,7 +8,7 @@ const octokit = new Octokit({
     baseUrl: 'https://api.github.com'
     });
 
-await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
+octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
   owner: core.getInput('org-name'),
   repo: core.getInput('repo-name'),
   username: 'team1',
