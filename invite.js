@@ -10,7 +10,7 @@ const octokit = new Octokit({
 
 async function invite() {
     try {
-         octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
+         await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
           owner: core.getInput('org-name'),
           repo: core.getInput('repo-name'),
           username: 'son7211na',
