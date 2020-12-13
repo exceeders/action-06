@@ -8,11 +8,21 @@ const octokit = new Octokit({
     baseUrl: 'https://api.github.com'
     });
 
-octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
-  owner: core.getInput('org-name'),
-  repo: core.getInput('repo-name'),
-  username: 'son7211na',
-  permission: 'push'
-});
+async function invite() {
+    try {
+         octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
+          owner: core.getInput('org-name'),
+          repo: core.getInput('repo-name'),
+          username: 'son7211na',
+          permission: 'push'
+          });
+        
+        } catch (error) {
+            console.log(error);
+        }
+    
+
+invite();
+
 
 // permission can be one of : pull, push, admin, maintain, triage
