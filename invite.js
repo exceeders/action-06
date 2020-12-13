@@ -21,7 +21,7 @@ async function invite() {
             console.log(error);
         }
     
-
+    }
 invite();
 
 
