@@ -11,10 +11,10 @@ const octokit = new Octokit({
 async function invite() {
     try {
         await octokit.request('PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}', {
-            org: 'org-name',
+            org: core.getInput('org-name'),
             team_slug: 'team1',
-            owner: 'org-name',
-            repo: 'repo-name',
+            owner: core.getInput('org-name'),
+            repo: core.getInput('repo-name'),
             permission: 'push'
           });
         
