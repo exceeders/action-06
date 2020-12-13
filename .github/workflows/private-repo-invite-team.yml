@@ -26,7 +26,8 @@ jobs:
         uses : ./
         with :
            github_token: ${{ secrets.GITHUB_TOKEN }}
-           org-name: ${{ toJson(github.event.organization.login )}}
-           repo-name: ${{ toJson(github.event.repository.name )}}
-           
+           org-name: ${{ github.event.organization.login }}
+           repo-name: ${{ github.event.repository.name }}
+    
+     
             
