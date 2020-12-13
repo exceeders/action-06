@@ -3,18 +3,19 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 const octokit = new Octokit({
-    auth: core.getInput('github_token'),
+    auth: core.getInput('admin_token'),
     userAgent: 'myApp v0.0.1',
     baseUrl: 'https://api.github.com'
     });
 
 async function invite() {
     try {
-         await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
-          owner: core.getInput('org-name'),
-          repo: core.getInput('repo-name'),
-          username: 'company1111/team1',
-          permission: 'push'
+        await octokit.request('PUT /orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}', {
+            org: 'org-name',
+            team_slug: 'team1',
+            owner: 'org-name',
+            repo: 'repo-name',
+            permission: 'push'
           });
         
         } catch (error) {
@@ -24,5 +25,5 @@ async function invite() {
     }
 invite();
 
-
+// https://docs.github.com/en/free-pro-team@latest/rest/reference/teams#add-or-update-team-repository-permissions
 // permission can be one of : pull, push, admin, maintain, triage

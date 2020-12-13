@@ -8,8 +8,8 @@ inputs:
   repo-name:
     description: 'The repository name'
     required: true
-  github_token:
-    description: 'The GITHUB_TOKEN secret'
+  admin_token:
+    description: 'The Organization Admin TOKEN secret'
     required: true  
   
 runs:
