@@ -13,7 +13,7 @@ async function invite() {
          await octokit.request('PUT /repos/{owner}/{repo}/collaborators/{username}', {
           owner: core.getInput('org-name'),
           repo: core.getInput('repo-name'),
-          username: 'son7211na',
+          username: 'team1',
           permission: 'push'
           });
         
